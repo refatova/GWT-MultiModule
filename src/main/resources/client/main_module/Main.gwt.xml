@@ -1,0 +1,23 @@
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN"
+        "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
+<module rename-to="main">
+
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+    <inherits name="com.google.gwt.activity.Activity"/>
+    <inherits name="com.google.gwt.logging.Logging"/>
+    <inherits name="com.google.gwt.place.Place"/>
+    <inherits name="com.google.gwt.inject.Inject"/>
+    <inherits name="client.shared.Shared"/>
+    <set-property name="compiler.stackMode" value="emulated"/>
+    <set-configuration-property name="locale.useragent" value="Y"/>
+    <set-configuration-property name="locale.searchorder" value="useragent,queryparam,cookie,meta"/>
+    <entry-point class='client.main_module.client.Main'/>
+
+    <extend-property name="locale" values="uk"/>
+    <extend-property name="locale" values="ru"/>
+    <replace-with class="client.hello_module.client.ClientFactoryImpl">
+        <when-type-is class="client.hello_module.client.ClientFactory"/>
+    </replace-with>
+    <source path="client"></source>
+</module>

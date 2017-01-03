@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+        PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+    <welcome-file-list>
+        <welcome-file>Hello.html</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>remoteLoggingServlet</servlet-name>
+        <!--<servlet-class>com.google.gwt.logging.client.shared.server.RemoteLoggingServiceImpl</servlet-class>-->
+        <servlet-class>server.hello_module.MyRemoteLoggingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>remoteLoggingServlet</servlet-name>
+        <url-pattern>/hello/remote_logging</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>helloServlet</servlet-name>
+        <servlet-class>server.hello_module.LoginServiceIntfImpl</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+        <url-pattern>/hello/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>help</servlet-name>
+        <servlet-class>server.shared.HelpServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>help</servlet-name>
+        <url-pattern>/help</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>greetingServiceServlet</servlet-name>
+        <servlet-class>server.main_module.GreetingServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>greetingServiceServlet</servlet-name>
+        <url-pattern>/main/home</url-pattern>
+    </servlet-mapping>
+</web-app>
