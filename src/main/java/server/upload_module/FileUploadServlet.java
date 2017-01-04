@@ -46,7 +46,6 @@ public class FileUploadServlet extends HttpServlet {
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             return;
         }
-
     }
 }
 
