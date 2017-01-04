@@ -39,6 +39,7 @@
                                 <module>client.shared.shared</module>
                                 <module>client.main_module.main</module>
                                 <module>client.hello_module.hello</module>
+                                <module>client.upload_module.upload</module>
                             </modules>
                         </configuration>
                         <executions>
@@ -209,6 +210,18 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
             <version>1.9.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
         </dependency>
 
     </dependencies>

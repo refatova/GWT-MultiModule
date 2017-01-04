@@ -38,7 +38,7 @@ public class Main implements EntryPoint {
             greetingservice.getGreeting(LocaleInfo.getCurrentLocale().getLocaleName(), callback);
 
         } else {
-////          Window.alert("cookie is null");
+//            Window.alert("cookie is null");
 //            Window.open("Hello.html", "_self", "");
 
         }

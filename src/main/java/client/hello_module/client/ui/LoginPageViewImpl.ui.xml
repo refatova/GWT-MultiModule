@@ -28,7 +28,6 @@
             </g:HorizontalPanel>
         </g:VerticalPanel>
         <g:Button  ui:field="loginButton" styleName="{style.buttonStyle}"/>
-        <!--<g:Anchor ui:field='loginButton' href='/Main.html' />-->
         <g:Label  ui:field="errorMessage" styleName="{style.errorMessageStyle}"/>
 
     </g:HTMLPanel>

@@ -26,4 +26,10 @@ public interface GWTHelloConstants extends Constants {
     @DefaultStringValue("Incorrect username or password.")
     String serverError();
 
+    @DefaultStringValue("Upload")
+    String upload();
+
+    @DefaultStringValue("Clean")
+    String clean();
+
 }

@@ -46,4 +46,14 @@
         <servlet-name>greetingServiceServlet</servlet-name>
         <url-pattern>/main/home</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>fileUploadServlet</servlet-name>
+        <servlet-class>server.upload_module.FileUploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>fileUploadServlet</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+
 </web-app>
