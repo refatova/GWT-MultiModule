@@ -2,7 +2,7 @@ package server.hello_module;
 
 import client.hello_module.client.LoginServiceIntf;
 import client.hello_module.client.UserNotFoundException;
-import client.shared.client.HibernateUtil;
+import server.shared.HibernateUtil;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import javax.servlet.http.Cookie;
 

@@ -1,0 +1,72 @@
+[INFO ]2017-01-14 22:30:56.643 [main] LoginServiceIntfImpl- User with name Иван was found
+[INFO ]2017-01-14 22:30:56.971 [main] LoginServiceIntfImpl- Server received login_module: not_existed_user
+[INFO ]2017-01-14 22:30:56.978 [main] LoginServiceIntfImpl- User is not found
+[TRACE]2017-01-14 22:30:56.982 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 22:30:56.983 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 22:30:56.983 [main] GreetingServiceImpl- Message "morningMessage" will be printed
+[TRACE]2017-01-14 22:30:56.983 [main] GreetingServiceImpl- Message "eveningMessage" will be printed
+[TRACE]2017-01-14 22:30:56.984 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 22:30:56.984 [main] GreetingServiceImpl- Message "dayMessage" will be printed
+[TRACE]2017-01-14 22:30:56.984 [main] GreetingServiceImpl- Message "eveningMessage" will be printed
+[TRACE]2017-01-14 22:30:56.984 [main] GreetingServiceImpl- Message "morningMessage" will be printed
+[TRACE]2017-01-14 22:30:56.985 [main] GreetingServiceImpl- Message "dayMessage" will be printed
+[INFO ]2017-01-14 22:37:43.156 [main] LoginServiceIntfImpl- User with name Иван was found
+[INFO ]2017-01-14 22:37:43.462 [main] LoginServiceIntfImpl- Server received login_module: not_existed_user
+[INFO ]2017-01-14 22:37:43.468 [main] LoginServiceIntfImpl- User is not found
+[TRACE]2017-01-14 22:37:43.495 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 22:37:43.495 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 22:37:43.495 [main] GreetingServiceImpl- Message "morningMessage" will be printed
+[TRACE]2017-01-14 22:37:43.496 [main] GreetingServiceImpl- Message "eveningMessage" will be printed
+[TRACE]2017-01-14 22:37:43.496 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 22:37:43.497 [main] GreetingServiceImpl- Message "dayMessage" will be printed
+[TRACE]2017-01-14 22:37:43.497 [main] GreetingServiceImpl- Message "eveningMessage" will be printed
+[TRACE]2017-01-14 22:37:43.498 [main] GreetingServiceImpl- Message "morningMessage" will be printed
+[TRACE]2017-01-14 22:37:43.498 [main] GreetingServiceImpl- Message "dayMessage" will be printed
+[INFO ]2017-01-14 23:05:29.357 [main] LoginServiceIntfImpl- User with name Иван was found
+[INFO ]2017-01-14 23:05:29.682 [main] LoginServiceIntfImpl- Server received login_module: not_existed_user
+[INFO ]2017-01-14 23:05:29.688 [main] LoginServiceIntfImpl- User is not found
+[TRACE]2017-01-14 23:05:29.696 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 23:05:29.696 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 23:05:29.696 [main] GreetingServiceImpl- Message "morningMessage" will be printed
+[TRACE]2017-01-14 23:05:29.697 [main] GreetingServiceImpl- Message "eveningMessage" will be printed
+[TRACE]2017-01-14 23:05:29.697 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 23:05:29.697 [main] GreetingServiceImpl- Message "dayMessage" will be printed
+[TRACE]2017-01-14 23:05:29.697 [main] GreetingServiceImpl- Message "eveningMessage" will be printed
+[TRACE]2017-01-14 23:05:29.698 [main] GreetingServiceImpl- Message "morningMessage" will be printed
+[TRACE]2017-01-14 23:05:29.698 [main] GreetingServiceImpl- Message "dayMessage" will be printed
+[INFO ]2017-01-14 23:08:09.308 [main] LoginServiceIntfImpl- User with name Иван was found
+[INFO ]2017-01-14 23:08:09.516 [main] LoginServiceIntfImpl- Server received login_module: not_existed_user
+[INFO ]2017-01-14 23:08:09.521 [main] LoginServiceIntfImpl- User is not found
+[TRACE]2017-01-14 23:08:09.530 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 23:08:09.530 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 23:08:09.531 [main] GreetingServiceImpl- Message "morningMessage" will be printed
+[TRACE]2017-01-14 23:08:09.532 [main] GreetingServiceImpl- Message "eveningMessage" will be printed
+[TRACE]2017-01-14 23:08:09.532 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 23:08:09.533 [main] GreetingServiceImpl- Message "dayMessage" will be printed
+[TRACE]2017-01-14 23:08:09.533 [main] GreetingServiceImpl- Message "eveningMessage" will be printed
+[TRACE]2017-01-14 23:08:09.534 [main] GreetingServiceImpl- Message "morningMessage" will be printed
+[TRACE]2017-01-14 23:08:09.534 [main] GreetingServiceImpl- Message "dayMessage" will be printed
+[INFO ]2017-01-14 23:44:33.818 [main] LoginServiceIntfImpl- User with name Иван was found
+[INFO ]2017-01-14 23:44:34.154 [main] LoginServiceIntfImpl- Server received login_module: not_existed_user
+[INFO ]2017-01-14 23:44:34.161 [main] LoginServiceIntfImpl- User is not found
+[TRACE]2017-01-14 23:44:34.168 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 23:44:34.168 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 23:44:34.169 [main] GreetingServiceImpl- Message "morningMessage" will be printed
+[TRACE]2017-01-14 23:44:34.169 [main] GreetingServiceImpl- Message "eveningMessage" will be printed
+[TRACE]2017-01-14 23:44:34.170 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 23:44:34.170 [main] GreetingServiceImpl- Message "dayMessage" will be printed
+[TRACE]2017-01-14 23:44:34.170 [main] GreetingServiceImpl- Message "eveningMessage" will be printed
+[TRACE]2017-01-14 23:44:34.171 [main] GreetingServiceImpl- Message "morningMessage" will be printed
+[TRACE]2017-01-14 23:44:34.171 [main] GreetingServiceImpl- Message "dayMessage" will be printed
+[INFO ]2017-01-14 23:47:23.466 [main] LoginServiceIntfImpl- User with name Иван was found
+[INFO ]2017-01-14 23:47:23.668 [main] LoginServiceIntfImpl- Server received login_module: not_existed_user
+[INFO ]2017-01-14 23:47:23.674 [main] LoginServiceIntfImpl- User is not found
+[TRACE]2017-01-14 23:47:23.685 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 23:47:23.685 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 23:47:23.685 [main] GreetingServiceImpl- Message "morningMessage" will be printed
+[TRACE]2017-01-14 23:47:23.686 [main] GreetingServiceImpl- Message "eveningMessage" will be printed
+[TRACE]2017-01-14 23:47:23.686 [main] GreetingServiceImpl- Message "nightMessage" will be printed
+[TRACE]2017-01-14 23:47:23.687 [main] GreetingServiceImpl- Message "dayMessage" will be printed
+[TRACE]2017-01-14 23:47:23.687 [main] GreetingServiceImpl- Message "eveningMessage" will be printed
+[TRACE]2017-01-14 23:47:23.688 [main] GreetingServiceImpl- Message "morningMessage" will be printed
+[TRACE]2017-01-14 23:47:23.688 [main] GreetingServiceImpl- Message "dayMessage" will be printed

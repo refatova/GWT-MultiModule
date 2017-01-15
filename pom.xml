@@ -33,6 +33,8 @@
                             <noServer>true</noServer>
                             <port>8080</port>
                             <runTarget>Hello.html</runTarget>
+                            <failOnError>true</failOnError>
+                            <!--<logLevel>DEBUG</logLevel>-->
                             <!--<compileSourcesArtifacts>sources</compileSourcesArtifacts>-->
                             <!--<classifier>sources</classifier>-->
                             <modules>

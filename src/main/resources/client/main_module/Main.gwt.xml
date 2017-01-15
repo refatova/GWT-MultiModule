@@ -9,6 +9,7 @@
     <inherits name="com.google.gwt.place.Place"/>
     <inherits name="com.google.gwt.inject.Inject"/>
     <inherits name="client.shared.Shared"/>
+    <inherits name="client.hello_module.Hello"/>
     <set-property name="compiler.stackMode" value="emulated"/>
     <set-configuration-property name="locale.useragent" value="Y"/>
     <set-configuration-property name="locale.searchorder" value="useragent,queryparam,cookie,meta"/>
@@ -16,8 +17,8 @@
 
     <extend-property name="locale" values="uk"/>
     <extend-property name="locale" values="ru"/>
-    <replace-with class="client.hello_module.client.ClientFactoryImpl">
-        <when-type-is class="client.hello_module.client.ClientFactory"/>
-    </replace-with>
+    <!--<replace-with class="client.hello_module.client.ClientFactoryImpl">-->
+        <!--<when-type-is class="client.hello_module.client.ClientFactory"/>-->
+    <!--</replace-with>-->
     <source path="client"></source>
 </module>

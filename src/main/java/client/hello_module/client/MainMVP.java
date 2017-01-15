@@ -35,8 +35,11 @@ public class MainMVP implements EntryPoint {
         AppPlaceHistoryMapper historyMapper = GWT.create(AppPlaceHistoryMapper.class);
         PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(historyMapper);
         historyHandler.register(placeController, eventBus, defaultPlace);
-        RootPanel.get("content").clear();
-        RootPanel.get("content").add(appWidget);
+        RootPanel.get().clear();
+        RootPanel.get().add(appWidget);
+//        RootPanel.get("content").clear();
+//        RootPanel.get("content").add(appWidget);
+
         historyHandler.handleCurrentHistory();
     }
 }

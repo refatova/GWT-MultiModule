@@ -3,5 +3,18 @@
 <module rename-to="shared">
 
     <inherits name='com.google.gwt.user.User'/>
+    <entry-point class="client.shared.client.Shared"/>
+    <!--<inherits name="com.google.gwt.activity.Activity"/>-->
+    <!--<inherits name="com.google.gwt.logging.Logging"/>-->
+    <!--<inherits name="com.google.gwt.place.Place"/>-->
+    <!--<inherits name="com.google.gwt.inject.Inject"/>-->
+
+    <!--<extend-property name="locale" values="uk"/>-->
+    <!--<extend-property name="locale" values="ru"/>-->
+    <!--<set-configuration-property name="locale.useragent" value="Y"/>-->
+    <!--<set-configuration-property name="locale.searchorder" value="useragent,queryparam,cookie,meta"/>-->
+    <!--<replace-with class="client.hello_module.client.ClientFactoryImpl">-->
+        <!--<when-type-is class="client.hello_module.client.ClientFactory"/>-->
+    <!--</replace-with>-->
     <source path="client"/>
 </module>

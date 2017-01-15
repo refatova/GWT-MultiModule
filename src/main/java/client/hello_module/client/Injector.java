@@ -1,5 +1,6 @@
 package client.hello_module.client;
 
+import client.shared.client.CommonView;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.inject.client.GinModules;
@@ -20,4 +21,6 @@ public interface Injector extends Ginjector {
     HomePageView gethomePageView();
 
     LoginPageView getLoginPageView();
+
+    CommonView getCommonView();
 }

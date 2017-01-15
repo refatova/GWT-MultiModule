@@ -8,5 +8,8 @@ import com.google.gwt.user.client.ui.*;
  */
 public class Shared implements EntryPoint {
     public void onModuleLoad() {
+        CommonViewImpl commonView=new CommonViewImpl();
+        RootPanel.get().add(commonView);
+
     }
 }

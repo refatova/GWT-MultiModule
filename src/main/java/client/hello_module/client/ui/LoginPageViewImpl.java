@@ -85,6 +85,11 @@ public class LoginPageViewImpl extends Composite implements LoginPageView {
         errorMessage.setText("");
     }
 
+    @Override
+    public void setWidget(IsWidget isWidget) {
+
+    }
+
     @UiHandler("loginButton")
     void onClickLogin(ClickEvent e) {
         String loginToServer = nameField.getText();

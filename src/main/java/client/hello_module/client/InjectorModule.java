@@ -1,5 +1,7 @@
 package client.hello_module.client;
 
+import client.shared.client.CommonView;
+import client.shared.client.CommonViewImpl;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.SimpleEventBus;
 import com.google.gwt.inject.client.AbstractGinModule;
@@ -17,5 +19,6 @@ public class InjectorModule extends AbstractGinModule {
         bind(EventBus.class).to(SimpleEventBus.class);
         bind(HomePageView.class).to(HomePageViewImpl.class);
         bind(LoginPageView.class).to(LoginPageViewImpl.class);
+        bind(CommonView.class).to(CommonViewImpl.class);
     }
 }

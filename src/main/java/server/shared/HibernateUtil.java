@@ -1,4 +1,4 @@
-package client.shared.client;
+package server.shared;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;

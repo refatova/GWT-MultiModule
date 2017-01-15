@@ -1,5 +1,6 @@
 package client.main_module.client.ui;
 
+import client.hello_module.client.place.LoginPlace;
 import client.main_module.client.GreetingMessageIntf;
 import client.main_module.client.GreetingMessageIntfAsync;
 import client.shared.client.GWTHelloConstants;
@@ -58,7 +59,8 @@ public class HomePageViewImpl extends Composite implements HomePageView{
     void onClickLogout(ClickEvent e)
     {  Cookies.removeCookie("logged_user");
         logger.info(HOME_PAGE + "Return button pushed");
-        Window.open("Hello.html","_self","");
+        presenter.goTo(new LoginPlace());
+//        Window.open("Hello.html","_self","");
     }
 
 }

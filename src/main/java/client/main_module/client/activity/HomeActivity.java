@@ -3,6 +3,7 @@ package client.main_module.client.activity;
 
 import client.hello_module.client.ClientFactory;
 import client.hello_module.client.Injector;
+import client.shared.client.CommonView;
 import com.google.gwt.activity.shared.AbstractActivity;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.Place;
@@ -20,6 +21,7 @@ public class HomeActivity extends AbstractActivity implements HomePageView.Prese
     final Injector injector;
     private String message;
     private HomePageView homePageView;
+    private CommonView commonView;
 
 
 
@@ -28,6 +30,7 @@ public class HomeActivity extends AbstractActivity implements HomePageView.Prese
         this.clientFactory = clientFactory;
         this.injector = Injector.INSTANCE;
         this.homePageView=injector.gethomePageView();
+        this.commonView=injector.getCommonView();
     }
 
     @Override
@@ -36,7 +39,8 @@ public class HomeActivity extends AbstractActivity implements HomePageView.Prese
         homePageView.setExitButtonText();
         homePageView.setGreetingMessage(message);
         homePageView.setPresenter(this);
-        containerWidget.setWidget(homePageView.asWidget());
+        commonView.setWidget(homePageView);
+//        containerWidget.setWidget(homePageView.asWidget());
     }
 
     @Override
@@ -44,6 +48,10 @@ public class HomeActivity extends AbstractActivity implements HomePageView.Prese
         clientFactory.getPlaceController().goTo(place);
     }
 
+//    @Override
+//    public AcceptsOneWidget getHomePageView() {
+//        return (AcceptsOneWidget) homePageView;
+//    }
 
 
 }
