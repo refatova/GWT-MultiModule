@@ -1,13 +1,11 @@
-package client.hello_module.client;
+package client.main_module.client;
 
+import client.main_module.client.activity.HomeActivity;
+import client.main_module.client.place.HomePlace;
 import client.shared.client.ClientFactory;
-//import client.shared.client.CommonActivity;
-//import client.shared.client.CommonPlace;
 import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;
-import client.hello_module.client.activity.LoginActivity;
-import client.hello_module.client.place.LoginPlace;
 
 /**
  * Created by Saniye on 27.10.16.
@@ -23,8 +21,8 @@ public class AppActivityMapper  implements ActivityMapper {
 
     @Override
     public Activity getActivity(Place place) {
-        if (place instanceof LoginPlace)
-            return new LoginActivity(clientFactory);
+        if (place instanceof HomePlace)
+            return new HomeActivity((HomePlace) place,clientFactory);
         return null;
     }
 }

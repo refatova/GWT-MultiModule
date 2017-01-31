@@ -1,5 +1,6 @@
 package client.shared.client;
 
+import com.google.gwt.place.shared.Place;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -8,8 +9,10 @@ import com.google.gwt.user.client.ui.Widget;
  */
 public interface CommonView extends AcceptsOneWidget {
 
+    void setPresenter(Presenter presenter);
 
     public interface Presenter {
         AcceptsOneWidget getCommonView();
+//        void goTo(Place place);
     }
 }

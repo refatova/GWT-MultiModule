@@ -2,8 +2,8 @@ package client.hello_module.client.activity;
 
 import client.hello_module.client.LoginServiceIntf;
 import client.hello_module.client.LoginServiceIntfAsync;
-import client.hello_module.client.ClientFactory;
 import client.main_module.client.place.HomePlace;
+import client.shared.client.ClientFactory;
 import client.shared.client.CommonView;
 import client.shared.client.GWTHelloConstants;
 import client.hello_module.client.Injector;
@@ -13,6 +13,7 @@ import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.i18n.client.LocaleInfo;
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.user.client.Cookies;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
@@ -33,17 +34,16 @@ public class LoginActivity extends AbstractActivity implements LoginPageView.Pre
     private final LoginServiceIntfAsync loginService = GWT.create(LoginServiceIntf.class);
     private GWTHelloConstants constants = GWT.create(GWTHelloConstants.class);
     private static final String LOGIN_PAGE = "LoginPage: ";
-   private CommonView commonView;
 
     public LoginActivity(ClientFactory clientFactory) {
         this.clientFactory = clientFactory;
         this.injector = Injector.INSTANCE;
         this.loginPageView = injector.getLoginPageView();
-        this.commonView=injector.getCommonView();
     }
 
     @Override
     public void start(AcceptsOneWidget containerWidget, EventBus eventBus) {
+        Window.alert("Login Activity start");
         loginPageView.setNameFieldLabel();
         loginPageView.setPasswordFieldLabel();
         loginPageView.cleanErrorMessage();
@@ -52,8 +52,7 @@ public class LoginActivity extends AbstractActivity implements LoginPageView.Pre
         loginPageView.cleanPasswordField();
         loginPageView.setLoginButtonEnable(true);
         loginPageView.setPresenter(this);
-        commonView.setWidget(loginPageView);
-//        containerWidget.setWidget(loginPageView.asWidget());
+        containerWidget.setWidget(loginPageView.asWidget());
     }
 
     @Override
@@ -75,14 +74,13 @@ public class LoginActivity extends AbstractActivity implements LoginPageView.Pre
                     @Override
                     public void onSuccess(Void result) {
                         if( Cookies.getCookie("logged_user")!=null)
-                            goTo(new HomePlace(""));
-//                            Window.open("Main.html","_self","");
+                            goTo(new HomePlace(login));
                     }
                 });
     }
 
-//    @Override
-//    public AcceptsOneWidget getLoginPageView() {
-//        return loginPageView;
-//    }
+    @Override
+    public AcceptsOneWidget getLoginPageView() {
+        return loginPageView;
+    }
 }

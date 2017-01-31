@@ -1,12 +1,10 @@
-package client.hello_module.client;
+package client.main_module.client;
 
+import client.main_module.client.ui.HomePageView;
 import client.shared.client.CommonView;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.inject.client.GinModules;
 import com.google.gwt.inject.client.Ginjector;
-import client.main_module.client.ui.HomePageView;
-import client.hello_module.client.ui.LoginPageView;
 
 /**
  * Created by Saniye on 31.10.16.
@@ -18,9 +16,9 @@ public interface Injector extends Ginjector {
 
 //    EventBus getEventBus();
 
-//    HomePageView gethomePageView();
+    HomePageView gethomePageView();
 
-    LoginPageView getLoginPageView();
+//    LoginPageView getLoginPageView();
 
     CommonView getCommonView();
 }

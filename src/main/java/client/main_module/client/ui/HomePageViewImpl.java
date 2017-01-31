@@ -26,7 +26,7 @@ public class HomePageViewImpl extends Composite implements HomePageView{
     private static Logger logger = Logger.getLogger(HomePageViewImpl.class.toString());
     private static final String HOME_PAGE = "HomePage: ";
     private Presenter presenter;
-    private final GreetingMessageIntfAsync greetingService = GWT.create(GreetingMessageIntf.class);
+//    private final GreetingMessageIntfAsync greetingService = GWT.create(GreetingMessageIntf.class);
 
     @UiField
     Label greetingMessage;
@@ -57,7 +57,8 @@ public class HomePageViewImpl extends Composite implements HomePageView{
 
     @UiHandler("returnButton")
     void onClickLogout(ClickEvent e)
-    {  Cookies.removeCookie("logged_user");
+    {
+        Cookies.removeCookie("logged_user");
         logger.info(HOME_PAGE + "Return button pushed");
         presenter.goTo(new LoginPlace());
 //        Window.open("Hello.html","_self","");

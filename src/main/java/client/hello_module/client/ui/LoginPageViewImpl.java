@@ -106,6 +106,7 @@ public class LoginPageViewImpl extends Composite implements LoginPageView {
 
     public LoginPageViewImpl() {
         initWidget(ourUiBinder.createAndBindUi(this));
+        this.setLoginButtonText();
         logger.info(LOGIN_PAGE + "Login page loaded");
         logger.info(LOGIN_PAGE + "Browser locale is " + LocaleInfo.getCurrentLocale().getLocaleName());
     }

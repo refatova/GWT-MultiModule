@@ -16,8 +16,8 @@ import client.hello_module.client.ui.LoginPageViewImpl;
 public class InjectorModule extends AbstractGinModule {
     @Override
     protected void configure() {
-        bind(EventBus.class).to(SimpleEventBus.class);
-        bind(HomePageView.class).to(HomePageViewImpl.class);
+//        bind(EventBus.class).to(SimpleEventBus.class);
+//        bind(HomePageView.class).to(HomePageViewImpl.class);
         bind(LoginPageView.class).to(LoginPageViewImpl.class);
         bind(CommonView.class).to(CommonViewImpl.class);
     }

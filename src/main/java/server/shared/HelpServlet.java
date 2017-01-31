@@ -20,4 +20,6 @@ public class HelpServlet extends HttpServlet {
         RequestDispatcher view = request.getRequestDispatcher("/Help.html");
         view.forward(request, response);
     }
+
+
 }

@@ -1,4 +1,4 @@
-package client.hello_module.client;
+package client.shared.client;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.PlaceController;

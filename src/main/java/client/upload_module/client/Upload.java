@@ -9,6 +9,7 @@ import com.google.gwt.user.client.ui.RootPanel;
  */
 public class Upload implements EntryPoint {
     public void onModuleLoad() {
+        Window.alert("upload module");
         LoadFilePageView loadFilePageView=new LoadFilePageViewImpl();
         RootPanel.get("content").clear();
         RootPanel.get("content").add(loadFilePageView);

@@ -1,5 +1,4 @@
-<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN"
-        "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
+<?xml version="1.0" encoding = "UTF-8"?>
 <module rename-to="hello">
     <inherits name='com.google.gwt.user.User'/>
     <inherits name='com.google.gwt.user.theme.standard.Standard'/>
@@ -9,6 +8,7 @@
     <inherits name="com.google.gwt.inject.Inject"/>
     <inherits name="client.shared.Shared"/>
     <inherits name="client.main_module.Main"/>
+    <!--<inherits name="client.main_module.Main"/>-->
     <add-linker name="xsiframe"/>
     <set-configuration-property name="devModeRedirectEnabled" value="true"/>
     <set-property name="gwt.logging.logLevel" value="INFO"/>
@@ -16,13 +16,16 @@
     <set-property name="gwt.logging.enabled" value="TRUE"/>
     <set-property name="gwt.logging.hasWidgetsHandler" value="DISABLED"/>
     <set-property name="compiler.stackMode" value="emulated"/>
+    <set-property name="user.agent" value="safari" />
     <entry-point class="client.hello_module.client.MainMVP"/>
     <extend-property name="locale" values="uk"/>
     <extend-property name="locale" values="ru"/>
     <set-configuration-property name="locale.useragent" value="Y"/>
     <set-configuration-property name="locale.searchorder" value="useragent,queryparam,cookie,meta"/>
-    <replace-with class="client.hello_module.client.ClientFactoryImpl">
-        <when-type-is class="client.hello_module.client.ClientFactory"/>
+
+    <replace-with class="client.shared.client.ClientFactoryImpl">
+        <when-type-is class="client.shared.client.ClientFactory"/>
     </replace-with>
+
     <source path="client"></source>
 </module>
