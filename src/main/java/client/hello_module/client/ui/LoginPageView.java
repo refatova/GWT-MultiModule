@@ -30,9 +30,9 @@ public interface LoginPageView extends IsWidget, AcceptsOneWidget {
 
 
     public interface Presenter {
-        void goTo(Place place);
+//        void goTo(Place place);
         void sendUserToServer(String login, String password);
-        AcceptsOneWidget getLoginPageView();
+//        AcceptsOneWidget getLoginPageView();
     }
 
 

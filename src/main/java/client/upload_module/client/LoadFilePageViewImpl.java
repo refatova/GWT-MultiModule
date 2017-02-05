@@ -2,6 +2,8 @@ package client.upload_module.client;
 
 import client.shared.client.GWTHelloConstants;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.JsArray;
+import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -11,9 +13,6 @@ import com.google.gwt.user.client.ui.*;
 
 import java.util.logging.Logger;
 
-/**
- * Created by Saniye on 03.01.17.
- */
 public class LoadFilePageViewImpl extends Composite implements LoadFilePageView {
     interface LoadFileUiBinder extends UiBinder<Widget, LoadFilePageViewImpl> {
     }
@@ -52,7 +51,7 @@ public class LoadFilePageViewImpl extends Composite implements LoadFilePageView 
 
     @UiHandler("cleanButton")
     void onClickClearButton(ClickEvent clickEvent) {
-        removeTableRows();
+        table.removeAllRows();
     }
 
 
@@ -72,9 +71,18 @@ public class LoadFilePageViewImpl extends Composite implements LoadFilePageView 
 
         uploadFormPanel.addSubmitCompleteHandler(new FormPanel.SubmitCompleteHandler() {
             public void onSubmitComplete(FormPanel.SubmitCompleteEvent event) {
-                table.setHTML(1, 0, event.getResults());
+                JsArray<PersonData> jsArray = JsonUtils.safeEval(event.getResults());
+                updateTable(jsArray);
             }
         });
+    }
+
+    private void updateTable(JsArray<PersonData> persons) {
+        for (int i = 0; i < persons.length(); i++) {
+            table.setHTML(i + 1, 0, persons.get(i).getName());
+            table.setHTML(i + 1, 1, persons.get(i).getBirthDay());
+            table.setHTML(i + 1, 2, persons.get(i).getEmail());
+        }
     }
 
     public void setTable() {
@@ -85,15 +93,6 @@ public class LoadFilePageViewImpl extends Composite implements LoadFilePageView 
         cellFormatter.setHorizontalAlignment(
                 0, 1, HasHorizontalAlignment.ALIGN_LEFT);
         cellFormatter.setColSpan(0, 0, 2);
-    }
-
-
-    public void removeTableRows() {
-        int numRows = table.getRowCount();
-        if (numRows >= 1) {
-            table.removeRow(numRows - 1);
-            table.getFlexCellFormatter().setRowSpan(0, 1, numRows - 1);
-        }
     }
 
     @Override

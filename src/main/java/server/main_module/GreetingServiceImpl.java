@@ -10,10 +10,7 @@ import java.time.LocalDateTime;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-/**
- * Created by Saniye on 22.11.16.
- */
-public class GreetingServiceImpl extends RemoteServiceServlet implements GreetingMessageIntf{
+public class GreetingServiceImpl extends RemoteServiceServlet implements GreetingMessageIntf {
 
     static final String MORNING_MESSAGE = "morningMessage";
     static final String DAY_MESSAGE = "dayMessage";
@@ -21,7 +18,6 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
     static final String NIGHT_MESSAGE = "nightMessage";
     static final String LOCALISATION_BUNDLE = "bundle.MyBundle";
     final static Logger log = LogManager.getLogger(GreetingServiceImpl.class.getName());
-
 
 
     @Override

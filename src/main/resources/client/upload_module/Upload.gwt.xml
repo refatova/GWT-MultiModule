@@ -5,4 +5,10 @@
     <inherits name="client.shared.Shared"/>
     <entry-point class='client.upload_module.client.Upload'/>
     <set-property name="user.agent" value="safari" />
+    <inherits name="com.google.gwt.inject.Inject"/>
+    <inherits name="com.google.gwt.json.JSON" />
+
+    <replace-with class="com.goodow.realtime.json.js.JsJsonElement">
+        <when-type-is class="com.goodow.realtime.json.JsonElement"/>
+    </replace-with>
 </module>

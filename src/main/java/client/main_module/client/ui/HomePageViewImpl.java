@@ -1,8 +1,5 @@
 package client.main_module.client.ui;
 
-import client.hello_module.client.place.LoginPlace;
-import client.main_module.client.GreetingMessageIntf;
-import client.main_module.client.GreetingMessageIntfAsync;
 import client.shared.client.GWTHelloConstants;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -15,9 +12,6 @@ import com.google.gwt.user.client.ui.*;
 
 import java.util.logging.Logger;
 
-/**
- * Created by Saniye on 23.09.16.
- */
 public class HomePageViewImpl extends Composite implements HomePageView{
 
     interface MyBinderUiBinder extends UiBinder<Widget, HomePageViewImpl> {}
@@ -25,8 +19,6 @@ public class HomePageViewImpl extends Composite implements HomePageView{
     private GWTHelloConstants constants = GWT.create(GWTHelloConstants.class);
     private static Logger logger = Logger.getLogger(HomePageViewImpl.class.toString());
     private static final String HOME_PAGE = "HomePage: ";
-    private Presenter presenter;
-//    private final GreetingMessageIntfAsync greetingService = GWT.create(GreetingMessageIntf.class);
 
     @UiField
     Label greetingMessage;
@@ -45,11 +37,6 @@ public class HomePageViewImpl extends Composite implements HomePageView{
     }
 
     @Override
-    public void setPresenter(Presenter presenter) {
-        this.presenter = presenter;
-    }
-
-    @Override
     public void setExitButtonText() {
         this.returnButton.setText(constants.quit());
     }
@@ -60,8 +47,7 @@ public class HomePageViewImpl extends Composite implements HomePageView{
     {
         Cookies.removeCookie("logged_user");
         logger.info(HOME_PAGE + "Return button pushed");
-        presenter.goTo(new LoginPlace());
-//        Window.open("Hello.html","_self","");
+        Window.open("Hello.html","_self","");
     }
 
 }

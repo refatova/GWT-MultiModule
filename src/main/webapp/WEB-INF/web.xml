@@ -9,11 +9,15 @@
     </welcome-file-list>
     <servlet>
         <servlet-name>remoteLoggingServlet</servlet-name>
-        <!--<servlet-class>com.google.gwt.logging.client.shared.server.RemoteLoggingServiceImpl</servlet-class>-->
         <servlet-class>server.hello_module.MyRemoteLoggingServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
+        <servlet-name>remoteLoggingServlet</servlet-name>
+        <url-pattern>/main/remote_logging</url-pattern>
+    </servlet-mapping>
+
+<servlet-mapping>
         <servlet-name>remoteLoggingServlet</servlet-name>
         <url-pattern>/hello/remote_logging</url-pattern>
     </servlet-mapping>
@@ -44,7 +48,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>greetingServiceServlet</servlet-name>
-        <url-pattern>/hello/home</url-pattern>
+        <url-pattern>/main/home</url-pattern>
     </servlet-mapping>
 
     <servlet>

@@ -18,6 +18,7 @@ import java.util.logging.Logger;
 public class LoginPageViewImpl extends Composite implements LoginPageView {
     interface LoginBinderUiBinder extends UiBinder<Widget, LoginPageViewImpl> {
     }
+
     private static LoginBinderUiBinder ourUiBinder = GWT.create(LoginBinderUiBinder.class);
 
     private GWTHelloConstants constants = GWT.create(GWTHelloConstants.class);
@@ -97,7 +98,7 @@ public class LoginPageViewImpl extends Composite implements LoginPageView {
         if (!loginToServer.isEmpty() && !passwordToServer.isEmpty()) {
             setLoginButtonEnable(false);
             presenter.sendUserToServer(loginToServer, passwordToServer);
-            logger.info(LOGIN_PAGE +"Login "+ loginToServer + " "+ " were sent to client.shared.server");
+            logger.info(LOGIN_PAGE + "Login " + loginToServer + " " + " were sent to client.shared.server");
         } else {
             logger.info(LOGIN_PAGE + "Error message \"Login and password fields are empty\"");
             setErrorMessage(constants.validationError());

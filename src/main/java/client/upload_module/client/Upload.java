@@ -1,17 +1,19 @@
 package client.upload_module.client;
 
-import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.RootPanel;
 
-/**
- * Created by Saniye on 03.01.17.
- */
+import client.shared.client.CommonView;
+import client.shared.client.CommonViewImpl;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.Widget;
+
 public class Upload implements EntryPoint {
+    private CommonView commonView;
     public void onModuleLoad() {
-        Window.alert("upload module");
+        commonView=new CommonViewImpl();
         LoadFilePageView loadFilePageView=new LoadFilePageViewImpl();
-        RootPanel.get("content").clear();
-        RootPanel.get("content").add(loadFilePageView);
+        RootPanel.get().clear();
+        RootPanel.get().add((Widget) commonView);
+        commonView.setWidget(loadFilePageView);
     }
 }

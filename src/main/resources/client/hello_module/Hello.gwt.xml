@@ -7,8 +7,6 @@
     <inherits name="com.google.gwt.place.Place"/>
     <inherits name="com.google.gwt.inject.Inject"/>
     <inherits name="client.shared.Shared"/>
-    <inherits name="client.main_module.Main"/>
-    <!--<inherits name="client.main_module.Main"/>-->
     <add-linker name="xsiframe"/>
     <set-configuration-property name="devModeRedirectEnabled" value="true"/>
     <set-property name="gwt.logging.logLevel" value="INFO"/>
@@ -23,8 +21,8 @@
     <set-configuration-property name="locale.useragent" value="Y"/>
     <set-configuration-property name="locale.searchorder" value="useragent,queryparam,cookie,meta"/>
 
-    <replace-with class="client.shared.client.ClientFactoryImpl">
-        <when-type-is class="client.shared.client.ClientFactory"/>
+    <replace-with class="client.hello_module.client.ClientFactoryImpl">
+        <when-type-is class="client.hello_module.client.ClientFactory"/>
     </replace-with>
 
     <source path="client"></source>

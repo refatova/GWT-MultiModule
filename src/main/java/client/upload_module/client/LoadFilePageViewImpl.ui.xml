@@ -2,16 +2,18 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'>
 
     <ui:style>
-       .buttonStyle {
-            margin: 10px;
-            padding: 3px 10px;
-            background: silver;}
+       .buttonStyle{
+           margin: 10px;
+           margin-left: 17%;
+           padding: 3px 10px;
+           background: orange;
+       }
     </ui:style>
     <g:HTMLPanel>
         <g:FormPanel ui:field="uploadFormPanel">
             <g:HorizontalPanel>
                 <g:cell verticalAlignment="ALIGN_MIDDLE">
-                    <g:FileUpload ui:field="fileUpload" name="file" />
+                    <g:FileUpload ui:field="fileUpload" name="file"/>
                 </g:cell>
                 <g:cell horizontalAlignment="ALIGN_LEFT"  >
                     <g:Button ui:field="uploadButton" styleName="{style.buttonStyle}"/>

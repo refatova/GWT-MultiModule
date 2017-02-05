@@ -1,8 +1,5 @@
 package client.hello_module.client;
 
-import client.shared.client.ClientFactory;
-//import client.shared.client.CommonActivity;
-//import client.shared.client.CommonPlace;
 import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;
@@ -12,7 +9,7 @@ import client.hello_module.client.place.LoginPlace;
 /**
  * Created by Saniye on 27.10.16.
  */
-public class AppActivityMapper  implements ActivityMapper {
+public class AppActivityMapper implements ActivityMapper {
 
     private ClientFactory clientFactory;
 

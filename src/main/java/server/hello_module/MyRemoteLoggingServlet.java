@@ -1,9 +1,5 @@
 package server.hello_module;
 
-/**
- * Created by Saniye on 27.09.16.
- */
-
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
 import org.apache.logging.log4j.LogManager;

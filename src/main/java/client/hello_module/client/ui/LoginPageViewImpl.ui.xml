@@ -1,9 +1,14 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'>
     <ui:style>
-        .errorMessageStyle { color: red; padding: 5px;}
-        .buttonStyle{margin: 10px;
-            padding: 3px 10px; background: orange; }
+        .errorMessageStyle {
+            color: red;
+        }
+        .buttonStyle{
+            margin: 10px;
+            margin-left: 10%;
+            padding: 3px 10px;
+            background: orange; }
     </ui:style>
 
     <g:HTMLPanel>
@@ -26,9 +31,11 @@
                     <g:PasswordTextBox name="password" ui:field="passwordTextBox" />
                 </g:cell>
             </g:HorizontalPanel>
+            <g:Label  ui:field="errorMessage" styleName="{style.errorMessageStyle}"/>
+
         </g:VerticalPanel>
         <g:Button  ui:field="loginButton" styleName="{style.buttonStyle}"/>
-        <g:Label  ui:field="errorMessage" styleName="{style.errorMessageStyle}"/>
+
 
     </g:HTMLPanel>
 </ui:UiBinder>

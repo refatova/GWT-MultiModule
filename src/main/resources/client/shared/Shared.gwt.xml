@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding = "UTF-8"?>
 <module rename-to="shared">
-
     <inherits name='com.google.gwt.user.User'/>
-    <!--<inherits name="client.hello_module.Hello"/>-->
-    <entry-point class="client.shared.client.Shared"/>
     <inherits name="com.google.gwt.inject.Inject"/>
-
     <set-property name="user.agent" value="safari" />
     <inherits name="com.google.gwt.activity.Activity"/>
-    <!--<inherits name="com.google.gwt.logging.Logging"/>-->
     <inherits name="com.google.gwt.place.Place"/>
-    <!--<inherits name="com.google.gwt.inject.Inject"/>-->
-
-    <!--<extend-property name="locale" values="uk"/>-->
-    <!--<extend-property name="locale" values="ru"/>-->
-    <!--<set-configuration-property name="locale.useragent" value="Y"/>-->
-    <!--<set-configuration-property name="locale.searchorder" value="useragent,queryparam,cookie,meta"/>-->
-    <!--<replace-with class="client.shared.client.ClientFactoryImpl">-->
-        <!--<when-type-is class="client.shared.client.ClientFactory"/>-->
-    <!--</replace-with>-->
     <source path="client"/>
 </module>

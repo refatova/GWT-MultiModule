@@ -2,9 +2,6 @@ package client.shared.client;
 
 import com.google.gwt.i18n.client.Constants;
 
-/**
- * Created by Saniye on 23.09.16.
- */
 public interface GWTHelloConstants extends Constants {
 
 

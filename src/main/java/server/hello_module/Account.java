@@ -4,10 +4,6 @@ package server.hello_module;
 import javax.persistence.*;
 import java.io.Serializable;
 
-/**
- * Created by Saniye on 24.09.16.
- */
-
 @Entity
 @Table(name = "Account")
 public class Account  implements Serializable {

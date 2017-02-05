@@ -4,6 +4,7 @@ import client.hello_module.client.LoginServiceIntf;
 import client.hello_module.client.UserNotFoundException;
 import server.shared.HibernateUtil;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+
 import javax.servlet.http.Cookie;
 
 import org.apache.logging.log4j.LogManager;
@@ -15,10 +16,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.List;
 
-
-/**
- * Created by Saniye on 21.09.16.
- */
 public class LoginServiceIntfImpl extends RemoteServiceServlet implements LoginServiceIntf {
 
     final static Logger log = LogManager.getLogger(LoginServiceIntfImpl.class.getName());
@@ -50,7 +47,7 @@ public class LoginServiceIntfImpl extends RemoteServiceServlet implements LoginS
         List<Account> list = query.list();
         if (list.isEmpty()) {
             log.info("User is not found");
-            return null ;
+            return null;
         } else {
             String personName = list.get(0).getName();
             log.info("User with name {} was found", personName);
