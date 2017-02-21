@@ -47,7 +47,9 @@ public class HomePageViewImpl extends Composite implements HomePageView{
     {
         Cookies.removeCookie("logged_user");
         logger.info(HOME_PAGE + "Return button pushed");
-        Window.open("Hello.html","_self","");
+//        Window.Location.assign("j_spring_security_logout");
+        Window.Location.replace(GWT.getHostPageBaseURL()+"logout");
+//        Window.open("/login","_self","");
     }
 
 }

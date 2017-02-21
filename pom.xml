@@ -39,7 +39,7 @@
                             <modules>
                                 <module>client.shared.shared</module>
                                 <module>client.main_module.main</module>
-                                <module>client.hello_module.hello</module>
+                                <!--<module>client.hello_module.hello</module>-->
                                 <module>client.upload_module.upload</module>
                             </modules>
                         </configuration>
@@ -206,6 +206,39 @@
             <groupId>com.goodow.realtime</groupId>
             <artifactId>realtime-json</artifactId>
             <version>0.5.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>4.1.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>4.2.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>4.2.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version> 4.3.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version> 4.3.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version> 4.3.2.RELEASE</version>
         </dependency>
 
     </dependencies>

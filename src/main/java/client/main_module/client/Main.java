@@ -18,12 +18,11 @@ public class Main implements EntryPoint {
     private final Injector injector = Injector.INSTANCE;
 
     public void onModuleLoad() {
+
         commonView = injector.getCommonView();
         homePageView = injector.gethomePageView();
         homePageView.setExitButtonText();
-        String s = Cookies.getCookie("logged_user");
-        if (s != null) {
-            AsyncCallback<String> callback = new AsyncCallback<String>() {
+        AsyncCallback<String> callback = new AsyncCallback<String>() {
                 @Override
                 public void onFailure(Throwable caught) {
                     System.out.println("error");
@@ -31,16 +30,12 @@ public class Main implements EntryPoint {
 
                 @Override
                 public void onSuccess(String result) {
-                    homePageView.setGreetingMessage(result + " " + s);
+                    homePageView.setGreetingMessage(result);
                     commonView.setWidget(homePageView);
                     RootPanel.get().clear();
                     RootPanel.get().add((Widget) commonView);
                 }
             };
-            greetingservice.getGreeting(LocaleInfo.getCurrentLocale().getLocaleName(), callback);
-
-        } else {
-            Window.open("Hello.html", "_self", "");
-        }
+        greetingservice.getGreeting(LocaleInfo.getCurrentLocale().getLocaleName(), callback);
     }
 }

@@ -5,10 +5,17 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.csrf.CsrfToken;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.time.LocalDateTime;
 import java.util.Locale;
 import java.util.ResourceBundle;
+
 
 public class GreetingServiceImpl extends RemoteServiceServlet implements GreetingMessageIntf {
 
@@ -25,8 +32,10 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
         Locale browserLocal = new Locale(locale);
         Locale.setDefault(browserLocal);
         String messageCode = getMessageForCurrentTime();
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String name = auth.getName();
         ResourceBundle labels = ResourceBundle.getBundle(LOCALISATION_BUNDLE, browserLocal);
-        return labels.getString(messageCode);
+        return labels.getString(messageCode)+" "+name;
 
     }
 
